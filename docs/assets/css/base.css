@@ -1,0 +1,50 @@
+/* Shared ground for every page: reset, layout width, language switch, reveal-on-scroll.
+   Each game page brings its own colours, type and shapes on top of this. */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html.i18n-wait body{visibility:hidden}
+body{margin:0;font-family:'Onest',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:17px;line-height:1.55;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+h1,h2,h3,p{margin:0}
+[hidden]{display:none!important}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 32px}
+@media (max-width:640px){.wrap{padding:0 16px}body{font-size:16px}}
+
+.skip{position:absolute;left:-9999px;top:8px;z-index:100;padding:10px 14px;background:#fff;color:#000}
+.skip:focus{left:8px}
+:focus-visible{outline:3px solid var(--focus,#5ab0ff);outline-offset:3px}
+
+/* top bar: studio, other games, language */
+.top{position:relative;z-index:20}
+.top .wrap{display:flex;align-items:center;gap:20px;min-height:76px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;white-space:nowrap}
+.brand img{width:34px;height:34px;border-radius:9px}
+.games-nav{display:flex;gap:4px;margin-left:auto}
+.games-nav a{text-decoration:none;padding:8px 12px;border-radius:var(--nav-r,8px);opacity:.78;white-space:nowrap;font-size:15px}
+.games-nav a:hover,.games-nav a[aria-current]{opacity:1;background:var(--nav-hover,rgba(255,255,255,.08))}
+.lang{display:inline-flex;padding:3px;gap:2px;border-radius:var(--lang-r,10px);background:var(--lang-bg,rgba(255,255,255,.08))}
+.lang button{border:0;background:transparent;padding:6px 10px;border-radius:calc(var(--lang-r,10px) - 3px);font-size:13px;font-weight:650;letter-spacing:.02em;opacity:.65}
+.lang button[aria-pressed="true"]{background:var(--lang-on,#fff);color:var(--lang-on-ink,#000);opacity:1}
+@media (max-width:860px){.games-nav{display:none}.lang{margin-left:auto}}
+
+/* scroll reveal: only on wide screens, only below the first screen, never hides anything without JS */
+@media (min-width:900px) and (prefers-reduced-motion:no-preference){
+  .rv-pre{opacity:0;transform:translateY(28px)}
+  .rv-in{opacity:1;transform:none;transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--rv-d,0s)}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001s!important;animation-iteration-count:1!important;transition-duration:.001s!important;scroll-behavior:auto!important}}
+
+/* horizontal rows on phones: swipe instead of a long page */
+.swipe{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:4px}
+.swipe::-webkit-scrollbar{display:none}
+.swipe>*{scroll-snap-align:start;flex:0 0 auto}
+
+.foot{padding:56px 0 40px;font-size:15px}
+.foot .wrap{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center}
+.foot a{text-decoration:none;opacity:.8}
+.foot a:hover{opacity:1;text-decoration:underline}
+.foot .sp{flex:1}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}

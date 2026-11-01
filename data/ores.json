@@ -1,0 +1,119 @@
+{
+ "maxTier": 10,
+ "plots": 4,
+ "mergeCount": 3,
+ "mergeTr": "3 aynıyı birleştir",
+ "mergeEn": "Merge 3 alike",
+ "tiers": [
+  {
+   "tier": 1,
+   "tr": "Çimen",
+   "en": "Grass",
+   "value": 1,
+   "rgb": [
+    110,
+    180,
+    80
+   ]
+  },
+  {
+   "tier": 2,
+   "tr": "Taş",
+   "en": "Stone",
+   "value": 5,
+   "rgb": [
+    127,
+    127,
+    127
+   ]
+  },
+  {
+   "tier": 3,
+   "tr": "Kömür",
+   "en": "Coal",
+   "value": 25,
+   "rgb": [
+    45,
+    45,
+    50
+   ]
+  },
+  {
+   "tier": 4,
+   "tr": "Demir",
+   "en": "Iron",
+   "value": 95,
+   "rgb": [
+    200,
+    185,
+    165
+   ]
+  },
+  {
+   "tier": 5,
+   "tr": "Altın",
+   "en": "Gold",
+   "value": 350,
+   "rgb": [
+    255,
+    200,
+    40
+   ]
+  },
+  {
+   "tier": 6,
+   "tr": "Kızıl Taş",
+   "en": "Redstone",
+   "value": 1300,
+   "rgb": [
+    210,
+    45,
+    45
+   ]
+  },
+  {
+   "tier": 7,
+   "tr": "Lapis",
+   "en": "Lapis",
+   "value": 5000,
+   "rgb": [
+    40,
+    80,
+    200
+   ]
+  },
+  {
+   "tier": 8,
+   "tr": "Elmas",
+   "en": "Diamond",
+   "value": 18000,
+   "rgb": [
+    90,
+    230,
+    240
+   ]
+  },
+  {
+   "tier": 9,
+   "tr": "Zümrüt",
+   "en": "Emerald",
+   "value": 70000,
+   "rgb": [
+    40,
+    200,
+    90
+   ]
+  },
+  {
+   "tier": 10,
+   "tr": "Netherit",
+   "en": "Netherite",
+   "value": 260000,
+   "rgb": [
+    70,
+    45,
+    50
+   ]
+  }
+ ]
+}

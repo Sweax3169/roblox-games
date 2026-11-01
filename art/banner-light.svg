@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="400" viewBox="0 0 1280 400" role="img" aria-label="Roblox games by Sweax Studios">
+<style>
+  .b{animation:pop 3.6s cubic-bezier(.3,1.6,.4,1) infinite;transform-box:fill-box;transform-origin:center}
+  @keyframes pop{0%,8%{transform:scale(1)}14%,60%{transform:scale(.78);opacity:.75}70%,100%{transform:scale(1);opacity:1}}
+  .p1{animation:up 3.6s ease-out infinite}
+  @keyframes up{0%,10%{opacity:0;transform:translateY(0)}18%{opacity:1}45%,100%{opacity:0;transform:translateY(-34px)}}
+  .o{animation:merge 3.6s cubic-bezier(.5,0,.3,1) infinite;transform-box:fill-box;transform-origin:center}
+  @keyframes merge{0%,20%{transform:translateX(0);opacity:1}45%,100%{transform:translateX(var(--d));opacity:0}}
+  .n{animation:born 3.6s cubic-bezier(.3,1.6,.4,1) infinite;transform-box:fill-box;transform-origin:center}
+  @keyframes born{0%,44%{transform:scale(0)}58%{transform:scale(1.18)}66%,88%{transform:scale(1)}100%{transform:scale(0)}}
+  .r{animation:lit 3.6s linear infinite;opacity:.3}
+  @keyframes lit{0%,14%{opacity:1}24%,100%{opacity:.3}}
+  .t{animation:bob 7s ease-in-out infinite}.t2{animation-delay:-2.3s}.t3{animation-delay:-4.6s}
+  @keyframes bob{50%{transform:translateY(-6px)}}
+  @media (prefers-reduced-motion:reduce){.b,.p1,.o,.n,.r,.t{animation:none}.r{opacity:1}.p1{opacity:0}.n{transform:scale(1)}}
+</style>
+<rect width="1280" height="400" rx="24" fill="#F5F3EF"/>
+<rect x=".5" y=".5" width="1279" height="399" rx="23.5" fill="none" stroke="rgba(20,20,30,.12)"/>
+<text x="84" y="104" font-family="'Segoe UI Variable Display','Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="16" fill="rgba(21,23,28,.5)">Sweax Studios · sweax3169.github.io/roblox-games</text>
+<text x="80" y="190" font-family="'Segoe UI Variable Display','Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="78" font-weight="800" letter-spacing="-2.5" fill="#15171C">Roblox games</text>
+<text x="84" y="244" font-family="'Segoe UI Variable Display','Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="22" fill="rgba(21,23,28,.72)">Two are out on Roblox, the third is on its way.</text>
+<rect x="84" y="300" width="208" height="34" rx="9" fill="rgba(20,20,30,.04)" stroke="rgba(20,20,30,.12)"/><circle cx="100" cy="317" r="4.5" fill="#FF3F97"/><text x="112" y="322" font-family="'Segoe UI Variable Display','Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="14.5" font-weight="600" fill="rgba(21,23,28,.72)">+1 Speed POP IT Escape</text><rect x="302.2" y="300" width="111" height="34" rx="9" fill="rgba(20,20,30,.04)" stroke="rgba(20,20,30,.12)"/><circle cx="318.2" cy="317" r="4.5" fill="#45DD77"/><text x="330.2" y="322" font-family="'Segoe UI Variable Display','Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="14.5" font-weight="600" fill="rgba(21,23,28,.72)">Merge Ores</text><rect x="423.2" y="300" width="176" height="34" rx="9" fill="rgba(20,20,30,.04)" stroke="rgba(20,20,30,.12)"/><circle cx="439.2" cy="317" r="4.5" fill="#E1AE43"/><text x="451.2" y="322" font-family="'Segoe UI Variable Display','Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="14.5" font-weight="600" fill="rgba(21,23,28,.72)">RNG Zombie Defense</text>
+<g class="t"><rect x="730" y="120" width="160" height="160" rx="34" fill="#FF3F97"/><rect x="730" y="270" width="160" height="10" rx="5" fill="#C81E6E"/>
+<circle class="b" style="animation-delay:0.00s" cx="768" cy="168" r="16" fill="#FF9CC9"/><circle class="b" style="animation-delay:0.32s" cx="810" cy="168" r="16" fill="#FF9CC9"/><circle class="b" style="animation-delay:0.64s" cx="852" cy="168" r="16" fill="#FF9CC9"/><circle class="b" style="animation-delay:0.96s" cx="768" cy="210" r="16" fill="#F6DEB6"/><circle class="b" style="animation-delay:1.28s" cx="810" cy="210" r="16" fill="#F6DEB6"/><circle class="b" style="animation-delay:1.60s" cx="852" cy="210" r="16" fill="#F6DEB6"/><circle class="b" style="animation-delay:1.92s" cx="768" cy="252" r="16" fill="#A35A33"/><circle class="b" style="animation-delay:2.24s" cx="810" cy="252" r="16" fill="#A35A33"/><circle class="b" style="animation-delay:2.56s" cx="852" cy="252" r="16" fill="#A35A33"/><text class="p1" x="850" y="160" font-family="'Segoe UI Variable Display','Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="26" font-weight="800" fill="#fff">+1</text></g>
+<g class="t t2"><rect x="910" y="120" width="160" height="160" rx="4" fill="#1D232B" stroke="#0B0E12" stroke-width="4"/>
+<rect x="910" y="120" width="160" height="16" fill="#7D5534"/><rect class="o" style="--d:46px" x="926" y="186" width="36" height="36" fill="#6EB450" stroke="#0B0E12" stroke-width="3"/><rect class="o" style="--d:0px" x="972" y="186" width="36" height="36" fill="#6EB450" stroke="#0B0E12" stroke-width="3"/><rect class="o" style="--d:-46px" x="1018" y="186" width="36" height="36" fill="#6EB450" stroke="#0B0E12" stroke-width="3"/>
+<rect class="n" x="968" y="182" width="44" height="44" fill="#7F7F7F" stroke="#0B0E12" stroke-width="3"/>
+<rect x="928" y="256" width="124" height="4" fill="#A7B1BB"/></g>
+<g class="t t3"><path d="M1108 120H1250V262L1232 280H1090V138Z" fill="#1B1F23"/>
+<path d="M1170 154l30 17v34l-30 17-30-17v-34z" fill="none" stroke="#E1AE43" stroke-width="5"/><path d="M1170 176l11 6.5v13L1170 202l-11-6.5v-13z" fill="#E1AE43"/><rect class="r" style="animation-delay:0.0s" x="1108" y="248" width="17" height="8" fill="#9BB2A0"/><rect class="r" style="animation-delay:0.6s" x="1129" y="248" width="17" height="8" fill="#5DC180"/><rect class="r" style="animation-delay:1.2s" x="1150" y="248" width="17" height="8" fill="#51A0D9"/><rect class="r" style="animation-delay:1.8s" x="1171" y="248" width="17" height="8" fill="#A26FD2"/><rect class="r" style="animation-delay:2.4s" x="1192" y="248" width="17" height="8" fill="#E1AE43"/><rect class="r" style="animation-delay:3.0s" x="1213" y="248" width="17" height="8" fill="#DB6D4F"/></g>
+</svg>

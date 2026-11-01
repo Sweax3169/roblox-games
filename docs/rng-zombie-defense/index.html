@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en" data-title-en="RNG Zombie Defense · Coming soon to Roblox" data-title-tr="RNG Zombie Defense · Yakında Roblox'ta">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RNG Zombie Defense · Coming soon to Roblox</title>
+<meta name="description" content="Roll for weapons, set traps and hold your base for 40 waves. Coming soon to Roblox.">
+<meta property="og:title" content="RNG Zombie Defense">
+<meta property="og:description" content="Roll for weapons, set traps and hold your base for 40 waves. Coming soon to Roblox.">
+<meta property="og:image" content="https://sweax3169.github.io/roblox-games/assets/img/rng/play-arena.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#121417">
+<link rel="icon" href="../assets/img/rng/mark.svg" type="image/svg+xml">
+<script>(function(){var d=document.documentElement,q=new URLSearchParams(location.search).get('lang'),s;try{s=localStorage.getItem('sweax-roblox-lang')}catch(e){}var l=q||s||((navigator.language||'').toLowerCase().indexOf('tr')===0?'tr':'en');if(l==='tr'){d.lang='tr';d.classList.add('i18n-wait');setTimeout(function(){d.classList.remove('i18n-wait')},1500)}})()</script>
+<link rel="preload" href="../assets/fonts/chakra-petch-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/rng.css">
+</head>
+<body>
+<a class="skip" href="#main" data-tr="İçeriğe geç">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../" data-int><img src="../assets/img/studio-mark.webp" alt="" width="34" height="34"><span data-tr="Roblox oyunları">Roblox games</span></a>
+    <nav class="games-nav" aria-label="Games" data-tr-aria="Oyunlar">
+      <a href="../pop-it/" data-int>+1 Speed POP IT</a>
+      <a href="../merge-ores/" data-int>Merge Ores</a>
+      <a href="./" data-int aria-current="page">RNG Zombie Defense</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language" data-tr-aria="Dil">
+      <button type="button" data-lang-btn="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang-btn="tr" aria-pressed="false">TR</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"><img src="../assets/img/rng/play-arena.webp" alt="" width="1600" height="941"></div>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="soon"><i></i><span data-tr="Yakında Roblox'ta">Coming soon to Roblox</span></p>
+        <h1>RNG Zombie Defense</h1>
+        <p class="lead" data-tr="Silah çevir, tuzak kur, üssünü 40 dalga boyunca savun. Her beş dalgada bir boss gelir.">Roll for weapons, set traps and hold your base for 40 waves. Every fifth wave brings a boss.</p>
+        <div class="acts">
+          <a class="plate plate-light" href="https://discord.gg/vGZ2DZZsrf" target="_blank" rel="noopener" data-tr="Çıkış haberi için Discord">Discord for the launch</a>
+          <a class="plate plate-dark" href="https://www.roblox.com/games/88091393604186" target="_blank" rel="noopener" data-tr="Roblox sayfası">Roblox page</a>
+        </div>
+        <p class="meta" data-tr="Oyun henüz herkese açık değil. Çıkış tarihi Discord'da duyurulacak.">The game is not public yet. The launch date will be announced on Discord.</p>
+      </div>
+
+      <div class="machine" id="machine" aria-labelledby="roll-h">
+        <h2 id="roll-h" class="sr" data-tr="Silah çevirme">Weapon roll</h2>
+        <div class="light" aria-hidden="true"></div>
+        <div class="reel">
+          <img id="reel-img" src="../assets/img/rng/w-deagle.webp" alt="" width="420" height="280">
+        </div>
+        <div class="readout" aria-live="polite">
+          <p class="r-rarity" id="r-rarity" data-tr="Çevirmeye hazır">Ready to roll</p>
+          <p class="r-name" id="r-name">Deagle</p>
+          <p class="r-odds" id="r-odds"></p>
+        </div>
+        <button type="button" class="plate plate-roll" id="roll" data-tr="Çevir">Roll</button>
+        <div class="dials">
+          <label><span data-tr="Şans seviyesi">Luck level</span> <b id="luck-v">50</b><input type="range" id="luck" min="1" max="50" value="50"></label>
+          <label><span data-tr="Dalga">Wave</span> <b id="wave-v">40</b><input type="range" id="wave" min="1" max="40" value="40"></label>
+        </div>
+        <ol class="odds" id="odds" aria-label="Rarity odds" data-tr-aria="Nadirlik oranları"></ol>
+        <p class="m-note" data-tr="Oranlar oyunun kendi formülüyle hesaplanır. Üst nadirlikler şans ve dalgayla açılır.">Odds use the game's own formula. Higher rarities open with luck and waves.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="waves wrap" aria-labelledby="waves-h">
+    <h2 id="waves-h" data-rv data-tr="40 dalga. Her beşte bir boss.">40 waves. A boss every five.</h2>
+    <div class="wavebar" id="wavebar" aria-hidden="true" data-rv></div>
+    <ol class="bosses" id="bosses"></ol>
+  </section>
+
+  <section class="events" aria-labelledby="ev-h">
+    <div class="wrap">
+      <h2 id="ev-h" data-rv data-tr="Dalgalar olaylarla gelir">Waves come with events</h2>
+      <p class="sub" data-rv data-tr="İlk iki dalga ve boss dalgaları dışında her dalga bu on iki olaydan biriyle gelir.">Apart from the first two waves and the boss waves, every wave comes with one of these twelve events.</p>
+      <ul class="evgrid" id="events"></ul>
+    </div>
+  </section>
+
+  <section class="arsenal wrap" aria-labelledby="ars-h">
+    <h2 id="ars-h" data-rv data-tr="Altı nadirlikte 24 silah">24 weapons in six rarities</h2>
+    <p class="sub" data-rv data-tr="Deagle ile başlarsın. Diğer 23'ünü çevirerek bulur, sonra satın alırsın.">You start with the Deagle. The other 23 turn up in rolls, then you buy them.</p>
+    <div class="tiers" id="tiers"></div>
+  </section>
+
+  <section class="traps wrap" aria-labelledby="trap-h">
+    <h2 id="trap-h" data-rv data-tr="13 tuzak">13 traps</h2>
+    <p class="sub" data-rv data-tr="Zombilerin yoluna kurulur. Dalga aralarında geri toplayıp başka yere kurabilirsin.">Set them in the zombies' path. Between waves you can pick them up and set them somewhere else.</p>
+    <ul class="trapgrid" id="traps"></ul>
+  </section>
+
+  <section class="inside wrap" aria-labelledby="in-h">
+    <h2 id="in-h" data-rv data-tr="Oyundan">From the game</h2>
+    <div class="inside-grid">
+      <figure class="chest" data-rv>
+        <div class="chest-imgs"><img src="../assets/img/rng/chest-closed.webp" alt="The roll chest, closed" data-tr-alt="Çevirme sandığı, kapalı" width="900" height="622" loading="lazy"><img class="open" src="../assets/img/rng/chest-open.webp" alt="The roll chest, open" data-tr-alt="Çevirme sandığı, açık" width="900" height="622" loading="lazy"></div>
+        <figcaption data-tr="Çevirme sandığı. Açılınca ışık şeridi çıkan nadirliğin rengini alır.">The roll chest. When it opens, its light strip takes the colour of the rarity you rolled.</figcaption>
+      </figure>
+      <button class="shot" type="button" data-full="../assets/img/rng/play-arena.webp" data-rv style="--rv-d:.06s"><img src="../assets/img/rng/play-arena.webp" alt="The base and its ammo station, seen in first person" data-tr-alt="Üs ve mühimmat istasyonu, birinci şahıs görünüm" width="1600" height="941" loading="lazy"></button>
+      <button class="shot" type="button" data-full="../assets/img/rng/play-base.webp" data-rv style="--rv-d:.12s"><img src="../assets/img/rng/play-base.webp" alt="Holding a weapon at the base before a wave" data-tr-alt="Dalga öncesi üste silah elde" width="1400" height="823" loading="lazy"></button>
+      <button class="shot" type="button" data-full="../assets/img/rng/play-station.webp" data-rv style="--rv-d:.18s"><img src="../assets/img/rng/play-station.webp" alt="The free spin station at the base" data-tr-alt="Üsteki bedava çevirme istasyonu" width="1400" height="823" loading="lazy"></button>
+    </div>
+  </section>
+
+  <section class="facts wrap" aria-label="In numbers" data-tr-aria="Sayılarla">
+    <div data-rv><b>40</b><span data-tr="dalga">waves</span></div>
+    <div data-rv style="--rv-d:.04s"><b>8</b><span data-tr="boss">bosses</span></div>
+    <div data-rv style="--rv-d:.08s"><b>12</b><span data-tr="dalga olayı">wave events</span></div>
+    <div data-rv style="--rv-d:.12s"><b>24</b><span data-tr="silah">weapons</span></div>
+    <div data-rv style="--rv-d:.16s"><b>13</b><span data-tr="tuzak">traps</span></div>
+    <div data-rv style="--rv-d:.2s"><b>17</b><span data-tr="dil">languages</span></div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap cta-in" data-rv>
+      <div>
+        <h2 data-tr="Çıkışı kaçırma">Be there at launch</h2>
+        <p data-tr="Tarih Discord'da duyurulacak.">The date will be announced on Discord.</p>
+      </div>
+      <a class="plate plate-light" href="https://discord.gg/vGZ2DZZsrf" target="_blank" rel="noopener" data-tr="Discord'a katıl">Join the Discord</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <a href="../" data-int data-tr="Tüm oyunlar">All games</a>
+    <a href="../pop-it/" data-int>+1 Speed POP IT</a>
+    <a href="../merge-ores/" data-int>Merge Ores</a>
+    <span class="sp"></span>
+    <a href="https://www.roblox.com/communities/740864436" target="_blank" rel="noopener">Sweax Studios</a>
+    <a href="https://discord.gg/vGZ2DZZsrf" target="_blank" rel="noopener">Discord</a>
+  </div>
+</footer>
+
+<dialog class="viewer" id="viewer" aria-label="Screenshot" data-tr-aria="Ekran görüntüsü"><img alt=""><button type="button" class="close" aria-label="Close" data-tr-aria="Kapat">×</button></dialog>
+
+<script src="../assets/js/data-rng.js"></script>
+<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/motion.js"></script>
+<script src="../assets/js/viewer.js"></script>
+<script src="../assets/js/rng.js"></script>
+</body>
+</html>
